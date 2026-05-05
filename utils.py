@@ -2,14 +2,15 @@ from rdkit import Chem
 from rdkit.Chem import Descriptors, AllChem, Draw
 
 def methyl_swapping(molecule):
+    """Swaps the methyl group of the molecule to a chlorine atom."""
 
     mol = Chem.MolFromSmiles(molecule)
 
     LogP = Descriptors.MolLogP(mol)
     M_w = Descriptors.MolWt(mol)
 
-    print("--Original Molecule--")
-    print("Molecule: "+str(molecule))
+    print("\n--Original Molecule--")
+    print("Molecule in SMILES: "+str(molecule))
     print("Molecular weight: " + str(M_w)) 
     print("LogP: " + str(LogP))
     img = Draw.MolToImage(mol)
@@ -28,8 +29,8 @@ def methyl_swapping(molecule):
         Changed_M_w = Descriptors.MolWt(one_molecule)
 
 
-    print("--Changed Molecule--")
-    print("Molecule: "+ str(one_molecule))
+    print("\n--Changed Molecule--")
+    print("Molecule in SMILES: "+ str(Chem.MolToSmiles(one_molecule)))
     print("Molecular weight: "+str(Changed_M_w))
     print("LogP: "+str(Changed_LogP))
     img2 = Draw.MolToImage(one_molecule)
@@ -37,13 +38,13 @@ def methyl_swapping(molecule):
     print("Changed molecules is saved as changed_molecule.png")
     
 
-    print("--Overall Change--")
+    print("\n--Overall Change--")
     print("Molecular weight change: " + str(abs(M_w-Changed_M_w)))
     print("LogP change: " + str(abs(LogP-Changed_LogP)))
 
 
 def carb_acid_to_tetrazole(molecule):
-
+    """Replaces carboxylic acid group with a tetrazole ring."""
     car_acid_pattern = Chem.MolFromSmarts("C(=O)[OH]")
     mol = Chem.MolFromSmiles(molecule)
     tetrazole_ring = Chem.MolFromSmarts("c1nnn[nH]1")
@@ -64,6 +65,7 @@ def carb_acid_to_tetrazole(molecule):
 
 
 def halogen_scan(molecule):
+    """Replaces a hydrogen molecule with a flouring atom in a position that results in minimum TPSA value change."""
     mol = Chem.MolFromSmiles(molecule)
     mol_with_hs = Chem.AddHs(mol)
 
