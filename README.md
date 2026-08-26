@@ -1,26 +1,37 @@
-# bioisostere-transformations
+# Bioisostere Transformations
 
-**The project**
-A toolkit for performing common bioisosteric transformations used in medicinal chemistry built in Python.
+A Python/RDKit toolkit for exploring common structural transformations used in medicinal chemistry.
 
-**⚙️ Functions included**
-methyl_swapping → replaces methyl groups
-carb_acid_to_tetrazole → classic bioisostere transformation
-halogen_scan → H → F substitution 
+The project applies predefined molecular transformations to SMILES structures and generates modified molecular structures that can be inspected computationally.
 
-**🧠 Why it matters**
-Bioisosteres are used in drug design to improve stability, potency, and pharmacokinetics, without making a huge change to chemical properties of drugs.
+## ⚙️ Functions
 
-**Example input**
+### `methyl_swapping`
+Substitutes methyl groups with chlorine atoms.
+
+### `carb_acid_to_tetrazole`
+Replaces a carboxylic acid group with a tetrazole ring, representing a commonly studied bioisosteric transformation in medicinal chemistry.
+
+### `halogen_scan`
+Performs hydrogen → fluorine substitution to explore halogen-based molecular modifications.
+
+## 🧠 Why Bioisosteric Transformations?
+
+Bioisosteric replacement is a strategy used in medicinal chemistry to modify molecular structures while attempting to preserve or improve desirable biological and physicochemical properties.
+
+Depending on the transformation, these modifications can influence properties such as:
+
+- Potency
+- Selectivity
+- Metabolic stability
+- Solubility
+- Pharmacokinetics
+
+The actual effect of a transformation depends on the molecular context and cannot be determined from structural similarity alone.
+
+## Example
+
+```python
 smiles = "CC(=O)O"
+
 print(carb_acid_to_tetrazole(smiles))
-
-**Output**
-<img width="516" height="90" alt="image" src="https://github.com/user-attachments/assets/eb267e08-e4a9-4afa-b5dc-33b9e08f2a43" />
-<img width="944" height="337" alt="image" src="https://github.com/user-attachments/assets/8c86871f-d9d9-4f1d-a646-860d686dd893" />
-<img width="879" height="340" alt="image" src="https://github.com/user-attachments/assets/2e602044-fc2e-4620-9bd8-cd1e82398a70" />
-
-
-**Tools**
-- RDKit
-- Python
