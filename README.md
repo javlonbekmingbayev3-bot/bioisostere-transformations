@@ -36,10 +36,13 @@ smiles = "CC(=O)O"
 
 print(carb_acid_to_tetrazole(smiles))
 
-**Visual Examples**
-<img width="516" height="90" alt="image" src="https://github.com/user-attachments/assets/45bdc4d0-35ac-471a-bdd6-10aba410d607" />
-<img width="944" height="337" alt="image" src="https://github.com/user-attachments/assets/aba85e1f-3330-4a48-b64c-53613b26dca8" />
-<img width="879" height="340" alt="image" src="https://github.com/user-attachments/assets/2b8a810a-90b6-4b06-92ad-20c7f96d15fc" />
+The toolkit produces a transformed molecular structure that can be inspected using RDKit.
+
+Visual Examples
+<img width="516" height="90" alt="image" src="https://github.com/user-attachments/assets/109454d2-81d0-4c7c-92f3-4e6ab2e3799e" />
+<img width="944" height="337" alt="image" src="https://github.com/user-attachments/assets/233c5041-87e5-4753-8f4a-e18cb495708b" />
+<img width="879" height="340" alt="image" src="https://github.com/user-attachments/assets/a7d67fec-4bf5-4243-bdc3-ffb427eda352" />
+
 
 🛠️ Tools
 Python
