@@ -31,7 +31,7 @@ The actual effect of a transformation depends on the molecular context and canno
 
 ## Example
 
-```python
+python
 smiles = "CC(=O)O"
 
 print(carb_acid_to_tetrazole(smiles))
