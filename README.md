@@ -35,3 +35,30 @@ The actual effect of a transformation depends on the molecular context and canno
 smiles = "CC(=O)O"
 
 print(carb_acid_to_tetrazole(smiles))
+
+**Visual Examples**
+<img width="516" height="90" alt="image" src="https://github.com/user-attachments/assets/45bdc4d0-35ac-471a-bdd6-10aba410d607" />
+<img width="944" height="337" alt="image" src="https://github.com/user-attachments/assets/aba85e1f-3330-4a48-b64c-53613b26dca8" />
+<img width="879" height="340" alt="image" src="https://github.com/user-attachments/assets/2b8a810a-90b6-4b06-92ad-20c7f96d15fc" />
+
+🛠️ Tools
+Python
+RDKit
+SMILES / SMARTS
+Molecular substructure matching
+What I Learned
+
+This project helped me understand how chemical structures can be manipulated programmatically using substructure patterns.
+
+In particular, it introduced me to:
+
+SMILES molecular representations
+SMARTS pattern matching
+RDKit substructure operations
+Programmatic molecular transformations
+The computational side of bioisosteric design
+Limitations
+
+The transformations are predefined structural operations rather than predictions of biological activity.
+
+A successful structural transformation does not imply that the resulting molecule will have improved potency, safety, pharmacokinetics, or clinical performance.
