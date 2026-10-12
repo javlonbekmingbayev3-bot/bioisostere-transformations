@@ -36,7 +36,7 @@ smiles = "CC(=O)O"
 
 print(carb_acid_to_tetrazole(smiles))
 
-The toolkit produces a transformed molecular structure that can be inspected using RDKit.
+This is an exploratory proof-of-concept rather than a validated medicinal-chemistry toolkit. The transformations are implemented as predefined RDKit substructure replacements and do not model reaction mechanisms or predict biological activity. Some transformations may require additional chemical validation or sanitization for particular molecular structures.
 
 **Visual Examples**
 
